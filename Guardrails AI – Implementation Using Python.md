@@ -238,3 +238,76 @@ The chatbot provides an approved and safe response to the user.
 Input Guardrails = Protect the AI from unsafe inputs.
 
 Output Guardrails = Protect the user from unsafe AI outputs.
+
+=======
+
+
+# Guardrails AI – Architecture Diagram
+
+## 1. Without Guardrails vs With Guardrails
+
+```mermaid
+flowchart LR
+
+    subgraph A["Without Guardrails"]
+        direction LR
+        A1["LLM Application"]
+        A2["Prompt"] --> A3["LLM"] --> A4["Output"]
+        A1 --- A2
+    end
+
+    subgraph B["With Guardrails"]
+        direction TB
+
+        subgraph IG["Input Guard"]
+            direction LR
+            B1["Contains PII"]
+            B2["Off Topic"]
+            B3["Jailbreak Attempt"]
+        end
+
+        subgraph APP["LLM Application"]
+            direction LR
+            B4["Prompt"] --> B5["LLM"] --> B6["Output"]
+        end
+
+        subgraph OG["Output Guard"]
+            direction LR
+            B7["Hallucinations"]
+            B8["Profanity"]
+            B9["Competitor Mention"]
+        end
+
+        IG --> APP
+        APP --> OG
+    end
+
+    A4 --> B4
+```
+
+## 2. Without Guardrails
+
+Prompt → LLM → Output
+
+## 3. With Guardrails
+
+Input Guard → LLM Application → Output Guard
+
+### Input Guard
+- Contains PII
+- Off Topic
+- Jailbreak Attempt
+
+### LLM Application
+- Prompt
+- LLM
+- Output
+
+### Output Guard
+- Hallucinations
+- Profanity
+- Competitor Mention
+
+
+
+
