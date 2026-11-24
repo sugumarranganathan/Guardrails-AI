@@ -1,5 +1,5 @@
 
-## 3. Where is Context Used?
+## Where is Context Used?
 
 1. RAG-based chatbots
 2. AI agents
@@ -8,7 +8,7 @@
 5. Conversation memory
 6. Document processing
 
-## 4. Practical Example
+## Practical Example
 
 Suppose you develop a Tamil-speaking real estate chatbot.
 
