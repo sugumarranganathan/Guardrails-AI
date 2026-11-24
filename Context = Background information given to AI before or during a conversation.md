@@ -1,27 +1,31 @@
+
+# Context in Artificial Intelligence
+
 Context is the information or background provided to an AI model to help it understand a user's question and generate a relevant answer.
 
-In simple terms:
+**In simple terms:**
 
 Context = Background information given to AI before or during a conversation.
-1. Example
+
+## 1. Example
+
 Imagine you ask an AI chatbot:
 
 "What is the price of this property?"
 
-Without context:
+**Without Context:**
 - The AI doesn't know which property you mean.
 - It may give an incorrect or general answer.
-With context:
+
+**With Context:**
 - Property name: Green Valley Apartments
 - Location: Chennai
 - 2 BHK
 - Price: ₹65 Lakhs
+
 Now the AI can provide a relevant answer.
 
-
-
-2. Context in LLM
-
+## 2. Context in LLM
 
 | Term | Meaning |
 |---|---|
@@ -30,8 +34,3 @@ Now the AI can provide a relevant answer.
 | Context Window | Amount of information an LLM can process at one time |
 | Context Length | Number of tokens the model can handle |
 | Context Management | Organizing relevant information for AI |
-
-
-
-
-
